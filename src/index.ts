@@ -87,7 +87,7 @@ export class SequelizeTypescriptMigration {
 
     if (migration.commandsUp.length === 0) {
       console.log("No changes found");
-      process.exit(0);
+      return Promise.resolve({ msg: "success" });
     }
 
     // log
